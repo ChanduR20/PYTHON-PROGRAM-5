@@ -26,3 +26,25 @@ print("d1-d2:")
 d1.display()
 print("that is:",d1.convert_to_meters(),"meters")
 end
+class complex:
+    def __init__(self):
+        self.real=0
+        self.img=0
+    def setvalue(self,real,img):
+        self.real=real
+        self.img=img
+    def __add__(self,val):
+        temp=complex()
+        temp.real=self.real+val.real
+        temp.img=self.img+val.img
+        return temp
+    def display(self):
+        print("(",self.real,'+',self.img,'i'")")
+val1=complex()
+val2=complex()
+val3=complex()
+val1.setvalue(1,2)
+val2.setvalue(3,4)
+val3=val1+val2
+val3.display()
+end
